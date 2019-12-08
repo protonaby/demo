@@ -1,6 +1,4 @@
-import {
-  countLuckyTickets
-} from '../src/task5.js';
+import {  countLuckyTickets} from '../src/task5.js';
 
 function test5(assert) {
   describe('countLuckyTickets function', function() {
