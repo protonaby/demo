@@ -18,7 +18,8 @@ export function countLuckyTickets(context) {
     }
   }
   let winner = simple > hard ? 'Simple' : 'Hard';
-
+  if (simple == hard) winner = 'draw';
+  
   return {
     winner: winner,
     simple: simple,

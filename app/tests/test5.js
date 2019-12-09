@@ -1,7 +1,7 @@
 import {  countLuckyTickets} from '../src/task5.js';
 
 function test5(assert) {
-  describe('countLuckyTickets function', function() {
+  describe('5. countLuckyTickets function', function() {
     it("countLuckyTickets({min: '000000', max:'111111'}) should return {winner: 'Simple', simple: 5134, hard: 4949}", function() {
       assert.deepEqual(countLuckyTickets({min: '000000', max:'111111'}), {winner: 'Simple', simple: 5134, hard: 4949});
     });

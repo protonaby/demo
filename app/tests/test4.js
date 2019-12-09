@@ -1,7 +1,7 @@
 import { getPalindrome } from '../src/task4.js';
 
 function test4(assert) {
-  describe('getPalindrome function', function() {
+  describe('4. getPalindrome function', function() {
     it('getPalindrome(101) should return 101', function() {
       assert.equal(getPalindrome(101), 101);
     });

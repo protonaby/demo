@@ -1,5 +1,17 @@
 export function analizeEnvelops(first, second) {
-  //todo validation
+  if (typeof(first.a) != 'number' ||
+    typeof(first.b) != 'number' ||
+    typeof(second.c) != 'number' ||
+    typeof(second.d) != 'number' ||
+    first.a <= 0 || first.a >= 1000000 ||
+    first.b <= 0 || first.b >= 1000000 ||
+    second.c <= 0 || second.c >= 1000000 ||
+    second.d <= 0 || second.da >= 1000000) {
+    return {
+      status: 'failed',
+      reason: 'a, b, c and d should be numbers between 1 and 1000000'
+    };
+  }
   normalize(first, second);
   if (envelopFits(first.a, first.b, second.c, second.d))
     return 2;

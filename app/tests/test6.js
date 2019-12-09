@@ -1,7 +1,7 @@
 import { getNumericalSequence } from '../src/task6.js';
 
 function test6(assert) {
-  describe('getNumericalSequence function', function() {
+  describe('6. getNumericalSequence function', function() {
     it('getNumericalSequence(5, 16) should return \'4,5,6,7,8\'', function() {
       assert.equal(getNumericalSequence(5, 16), '4,5,6,7,8');
     });
