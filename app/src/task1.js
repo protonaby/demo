@@ -12,9 +12,9 @@ export function displayChessBoard(height, width, symbol) {
     };
   }
   let result = '';
-  let oddRow = (symbol + '  ').repeat(width);
-  let evenRow = oddRow.split('').reverse().join('');
-  for (let i = 0; i < height; i++) {
+  const oddRow = (symbol + '  ').repeat(width);
+  const evenRow = oddRow.split('').reverse().join('');
+  for (let i = 0; i < height; i += 1) {
     result += (i % 2) ? evenRow + '\n' : oddRow + '\n';
   }
   return result;

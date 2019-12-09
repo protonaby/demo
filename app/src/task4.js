@@ -6,11 +6,11 @@ export function getPalindrome(number) {
     };
   }
   let palindromes = [];
-  let arr = number.toString().split('');
-  for (let k = arr.length; k >= 2; k--) {
-    for (let i = 0; i < arr.length - 1; i++) {
+  const arr = number.toString().split('');
+  for (let k = arr.length; k >= 2; k -= 1) {
+    for (let i = 0; i < arr.length - 1; i += 1) {
       let subStr = '';
-      for (let j = 0; j < k; j++) {
+      for (let j = 0; j < k; j += 1) {
         subStr = subStr + arr[i + j];
       }
       if (isPalibdrome(subStr))

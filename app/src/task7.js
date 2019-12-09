@@ -43,7 +43,7 @@ function fibByRange(min, max) {
     f[i] = f[i - 1] + f[i - 2];
     if (f[i] >= min && f[i] <= max)
       result.push(f[i]);
-    i++;
+    i += 1;
   }
   return result;
 }
@@ -56,7 +56,7 @@ function fibByLength(length) {
     f[i] = f[i - 1] + f[i - 2];
     if (f[i].toString().length == length)
       result.push(f[i]);
-    i++;
+    i += 1;
   }
   return result;
 }

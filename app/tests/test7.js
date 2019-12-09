@@ -1,7 +1,7 @@
 import { getFibonacci } from '../src/task7.js';
 
 function test7(assert) {
-  describe('7. getFibonacci function', function() {
+  describe('7. getFibonacci', function() {
     it("getFibonacci({min: 0, max: 10, length: 10}) should return error status", function() {
       assert.deepEqual(getFibonacci({min: 0, max: 10, length: 10}), {status: 'failed', reason: 'only one of length or min and max can be specified'});
     });

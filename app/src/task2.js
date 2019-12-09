@@ -28,9 +28,9 @@ function envelopFits(a, b, c, d) {
   if (Math.sqrt(a ** 2 + b ** 2) > Math.sqrt(c ** 2 + d ** 2))
     return false;
   for (let alpha = 90; alpha >= 0; alpha -= 1) {
-    let alphaRad = alpha * Math.PI / 180;
-    let p = b * Math.cos(alphaRad) + a * Math.sin(alphaRad);
-    let q = b * Math.sin(alphaRad) + a * Math.cos(alphaRad);
+    const alphaRad = alpha * Math.PI / 180;
+    const p = b * Math.cos(alphaRad) + a * Math.sin(alphaRad);
+    const q = b * Math.sin(alphaRad) + a * Math.cos(alphaRad);
     if (p < d && q < c) {
       return true;
     }

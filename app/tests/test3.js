@@ -1,7 +1,7 @@
 import { sortTriangles } from '../src/task3.js';
 
 function test3(assert) {
-  describe('3. sortTriangles function', function() {
+  describe('3. sortTriangles', function() {
     it('sortTriangles([{vertices: \'DEF\', d: 4, e: 5, f: 6},{vertices: \'ABC\', a: 10, b: 20, c: 22.36}]) should return [ \'ABC\', \'DEF\' ]', function() {
       assert.deepEqual(sortTriangles([
         {vertices: 'DEF', d: 4, e: 5, f: 6},

@@ -5,7 +5,7 @@ export function sortTriangles(triangles) {
       reason: 'number of trianles should be between 1 and 1000000'
     };
   let areas = [];
-  for (var i = 0; i < triangles.length; i++) {
+  for (let i = 0; i < triangles.length; i += 1) {
     const t = triangles[i];
     const verticesNames = t.vertices.toLowerCase().split('');
     const a = t[verticesNames[0]];
@@ -29,7 +29,7 @@ export function sortTriangles(triangles) {
     return b[1] - a[1];
   });
   let result = [];
-  for (var i = 0; i < areas.length; i++) {
+  for (let i = 0; i < areas.length; i += 1) {
     result.push(triangles[areas[i][0]].vertices);
   }
   return result;
