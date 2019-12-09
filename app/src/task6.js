@@ -11,9 +11,9 @@ export function getNumericalSequence(n, m) {
       reason: 'm should be a positive number'
     };
   }
-  let squareRoot = Math.ceil(Math.sqrt(m));
+  let root = Math.ceil(Math.sqrt(m));
   let result = '';
-  for (let i = squareRoot; i < squareRoot + n; i++) {
+  for (let i = root; i < root + n; i++) {
     result += i + ',';
   }
   return result.slice(0, -1);
