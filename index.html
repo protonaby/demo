@@ -3,15 +3,69 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Demo 1</title>
+  <link href="./app/style/main.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-  <h1>Demo 1</h1>
-  <h2><a href="tests.html">Tests</a></h2>
-  <script src="app/main.js" type="module"></script>
+<h1>Demo 1</h1>
+<h2><a href="tests.html">Tests</a></h2>
+<script src="app/main.js" type="module"></script>
+
+<div class="main">
+  <div class="left">
+    <button class="accordion">1. Chess board</button>
+    <div class="panel">
+      <form class='task1_form'>
+        <div class="">
+          <input class="inp11" min="0" placeholder="height" type="number">
+        </div>
+        <div class="">
+          <input class="inp12" min="0" placeholder="width" type="number">
+        </div>
+        <div class="">
+          <input class="inp13" placeholder="symbol" type="text">
+        </div>
+        <div class="">
+          <button class="apply" type="button">Apply</button>
+        </div>
+      </form>
+    </div>
+
+    <button class="accordion">2. Analyze Envelops</button>
+    <div class="panel">
+      <form class='task2_form'>
+        <div>Envelop 1:</div>
+        <div>
+          <input class="inp21" min="0" placeholder="a" step="any" type="number">
+          <input class="inp22" min="0" placeholder="b" step="any" type="number">
+        </div>
+        <div>Envelop 2:</div>
+        <div>
+          <input class="inp23" min="0" placeholder="c" step="any" type="number">
+          <input class="inp24" min="0" placeholder="d" step="any" type="number">
+        </div>
+
+        <div class="">
+          <button class="apply2" type="button">Apply</button>
+        </div>
+      </form>
+    </div>
+
+    <button class="accordion">3. Sort triangles</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+  </div>
+  <div class="right">
+    <h2>Result:</h2>
+    <textarea class="output" placeholder="output" readonly></textarea>
+  </div>
+</div>
+
+
 </body>
 
 </html>
