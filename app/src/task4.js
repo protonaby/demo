@@ -1,11 +1,11 @@
+import {Validator} from "./validator.js";
+
 export function getPalindrome(number) {
-  if (typeof number !== 'number' || isNaN(number)
-    || number < 11 || number >= 9007199254740991) {
+  if(!Validator.isNumberInRange(number, 11, 9007199254740990))
     return {
       status: 'failed',
       reason: 'input number should be between 11 and 9007199254740990'
     };
-  }
   let palindromes = [];
   const arr = number.toString().split('');
   for (let k = arr.length; k >= 2; k -= 1) {

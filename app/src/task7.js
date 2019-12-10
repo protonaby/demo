@@ -1,3 +1,5 @@
+import {Validator} from "./validator.js";
+
 export function getFibonacci(context) {
   const length = context.length;
   const min = context.min;
@@ -9,12 +11,6 @@ export function getFibonacci(context) {
       reason: 'either length or min and max must be specified'
     };
   }
-  if (Number.isInteger(length) && Number.isInteger(min) && Number.isInteger(max)) {
-    return {
-      status: 'failed',
-      reason: 'only one of length or min and max can be specified'
-    };
-  }
   if ((Number.isInteger(length) && Number.isInteger(min))
     || (Number.isInteger(length) && Number.isInteger(max))) {
     return {
@@ -22,13 +18,13 @@ export function getFibonacci(context) {
       reason: 'only one of length or min and max can be specified'
     };
   }
-  if (length !== undefined && length <= 0) {
+  if (!Validator.isPositiveNumberWhenDefined(length)) {
     return {
       status: 'failed',
       reason: 'length should be > 0'
     };
   }
-  if ((max !== undefined && max < 0) || (min !== undefined && min < 0)) {
+  if (!Validator.isPositiveNumberWhenDefined(min) || !Validator.isPositiveNumberWhenDefined(max)) {
     return {
       status: 'failed',
       reason: 'min and max should be >= 0'

@@ -7,12 +7,10 @@ import {getNumericalSequence} from "./src/task6.js";
 import {getFibonacci} from "./src/task7.js";
 
 document.querySelector('.apply').addEventListener("click", () => {
-  const inputs = [...document.querySelectorAll('[class^=inp1')];
-  const data = {};
-  inputs.forEach(inp => {
-    data[inp.className] = inp.value;
-  });
-  displayResult(displayChessBoard(...Object.values(data)));
+  const height = parseInt(document.querySelector('.inp11').value);
+  const width = parseInt(document.querySelector('.inp12').value);
+  const symbol = document.querySelector('.inp13').value;
+  displayResult(displayChessBoard(height, width, symbol));
 });
 
 document.querySelector('.apply2').addEventListener("click", () => {

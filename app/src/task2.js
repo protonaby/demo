@@ -1,21 +1,20 @@
+import {Validator} from "./validator.js";
+
 export function analyzeEnvelops(first, second) {
   const a = first.a;
   const b = first.b;
   const c = second.c;
   const d = second.d;
 
-  if (isNaN(a) || isNaN(b) || isNaN(c) || isNaN(d) ||
-    typeof(a) != 'number' || typeof(b) != 'number' ||
-    typeof(c) != 'number' || typeof(d) != 'number' ||
-    a <= 0 || a >= 1000000 ||
-    b <= 0 || b >= 1000000 ||
-    c <= 0 || c >= 1000000 ||
-    d <= 0 || d >= 1000000) {
+  if (!Validator.isFloatPointNumberInRange(a, 1, 1000000)
+    || !Validator.isFloatPointNumberInRange(b, 1, 1000000)
+    || !Validator.isFloatPointNumberInRange(c, 1, 1000000)
+    || !Validator.isFloatPointNumberInRange(d, 1, 1000000))
     return {
       status: 'failed',
       reason: 'a, b, c and d should be numbers between 1 and 1000000'
     };
-  }
+
   normalize(first, second);
   if (envelopFits(a, b, c, d))
     return 2;

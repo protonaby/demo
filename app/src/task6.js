@@ -1,11 +1,12 @@
+import {Validator} from "./validator.js";
+
 export function getNumericalSequence(n, m) {
-  if (isNaN(n) || typeof n != 'number' || n <= 0 || n >= 100) {
+  if(!Validator.isNumberInRange(n, 1, 99))
     return {
       status: 'failed',
       reason: 'n should be a number between 1 and 99'
     };
-  }
-  if (isNaN(n) || typeof m != 'number' || m <= 0) {
+  if (!Validator.isPositiveNumber(m)) {
     return {
       status: 'failed',
       reason: 'm should be a positive number'
