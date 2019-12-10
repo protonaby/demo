@@ -1,11 +1,11 @@
 export function getNumericalSequence(n, m) {
-  if (typeof n != 'number' || n <= 0 || n >= 100) {
+  if (isNaN(n) || typeof n != 'number' || n <= 0 || n >= 100) {
     return {
       status: 'failed',
       reason: 'n should be a number between 1 and 99'
     };
   }
-  if (typeof m != 'number' || m <= 0) {
+  if (isNaN(n) || typeof m != 'number' || m <= 0) {
     return {
       status: 'failed',
       reason: 'm should be a positive number'

@@ -1,8 +1,9 @@
 export function getPalindrome(number) {
-  if (number < 10 || number >= 9007199254740991) {
+  if (typeof number !== 'number' || isNaN(number)
+    || number < 11 || number >= 9007199254740991) {
     return {
       status: 'failed',
-      reason: 'input number should be between 10 and 9007199254740990'
+      reason: 'input number should be between 11 and 9007199254740990'
     };
   }
   let palindromes = [];

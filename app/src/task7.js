@@ -2,16 +2,24 @@ export function getFibonacci(context) {
   const length = context.length;
   const min = context.min;
   const max = context.max;
-  if (length !== undefined && min !== undefined && max !== undefined) {
+  if ((length === undefined && min === undefined && max === undefined) ||
+    (isNaN(min) && isNaN(max) && isNaN(length))) {
+    return {
+      status: 'failed',
+      reason: 'either length or min and max must be specified'
+    };
+  }
+  if (Number.isInteger(length) && Number.isInteger(min) && Number.isInteger(max)) {
     return {
       status: 'failed',
       reason: 'only one of length or min and max can be specified'
     };
   }
-  if (length === undefined && min === undefined && max === undefined) {
+  if ((Number.isInteger(length) && Number.isInteger(min))
+    || (Number.isInteger(length) && Number.isInteger(max))) {
     return {
       status: 'failed',
-      reason: 'either length or min and max must be specified'
+      reason: 'only one of length or min and max can be specified'
     };
   }
   if (length !== undefined && length <= 0) {
@@ -27,7 +35,7 @@ export function getFibonacci(context) {
     };
   }
 
-  if (length !== undefined)
+  if (length)
     return fibByLength(length);
   else
     return fibByRange(min, max);
