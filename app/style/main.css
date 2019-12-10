@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, serif;
+}
+
 .main {
   display: flex;
   flex-wrap: wrap;
@@ -40,4 +44,38 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+}
+
+.panelContents {
+  padding: 10px 0px 10px 10px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 12px;
+  margin: 5px 0px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+textarea {
+  padding: 6px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 14px;
+  resize: none;
+}
+
+input[type=text], input[type=number] {
+  padding: 6px 10px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
