@@ -32,11 +32,14 @@ export class Validator {
     return number.length === 6 && /^[0-9]*$/.test(number);
   }
 
-  static isPositiveNumber(n) {
+  static isPositiveFloatNumber(n) {
     return typeof n === 'number' && n > 0;
   }
 
-  static isPositiveNumberWhenDefined(n) {
-    return n === undefined || length >= 0;
+  static isPositiveFloatNumberOrZero(n) {
+    return typeof n === 'number' && n >= 0;
+  }
+  static isValueDefined(n){
+    return n !== undefined && !isNaN(n);
   }
 }

@@ -6,7 +6,7 @@ export function getNumericalSequence(n, m) {
       status: 'failed',
       reason: 'n should be a number between 1 and 99'
     };
-  if (!Validator.isPositiveNumber(m)) {
+  if (!Validator.isPositiveFloatNumber(m)) {
     return {
       status: 'failed',
       reason: 'm should be a positive number'
