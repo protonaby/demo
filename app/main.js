@@ -86,5 +86,12 @@ for (let i = 0; i < acc.length; i++) {
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
+    for (let j = 0; j < acc.length; j++) {
+      if (acc[j] !== this) {
+        acc[j].classList.remove("active");
+        let p = acc[j].nextElementSibling;
+        p.style.maxHeight = null;
+      }
+    }
   });
 }
